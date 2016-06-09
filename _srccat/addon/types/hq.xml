@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8" ?>
+<headquarters>
+  <upgrades>
+    <upgrade index="0" typename="SS_DOCK_P_HQ" storage="800000000">
+      <blueprints>
+        <blueprint typename="SS_SH_TR_M2_KYOTO" />
+      </blueprints>
+      <production time="3" money="100" resources="100">
+        <factor class="ship" value="1" />
+      </production>
+      <repair time="1" money="20" resources="20">
+        <factor class="ship" value="2" />
+        <factor class="hq" value="2" />
+      </repair>
+      <reverse time="20" money="0" resources="0">
+        <factor class="ship" value="1" />
+      </reverse>
+      <recycle time="1" money="0" resources="80">
+        <factor class="ship" value="1" />
+      </recycle>
+    </upgrade>
+  </upgrades>
+  <resources>
+    <!-- Time (uses the SETA upgrade as the typename!) -->
+    <resource typename="SS_WARE_TECH231">
+      <factor class="m5" value="400000" primary="1" />
+      <factor class="m4" value="400000" primary="1" />
+      <factor class="m3" value="400000" primary="1" />
+      <factor class="gonership" value="400000" primary="1" />
+      <factor class="freighter" value="400000" primary="1" />
+      <factor class="bigship" value="400000" primary="1" />
+      <factor class="hq" value="25000" primary="1" />
+    </resource>
+
+  <!-- Money -->
+    <resource typename="SS_WARE_CREDITS">
+      <factor value="10" primary="1"/>
+    </resource>
+
+  <!-- Nividium -->
+    <resource typename="SS_WARE_NIVIDIUM2">
+      <factor racemask="khaak" value="170000" primary="1" />
+    </resource>
+
+  <!-- Energy Cells -->
+    <resource typename="SS_WARE_ENERGY">
+      <factor value="113" primary="1" />
+    </resource>
+
+   <!-- Teladianium -->
+    <resource typename="SS_WARE_R255">
+      <factor value="7811" primary="1" />
+    </resource>
+
+  <!-- Cloth Rimes -->
+    <resource typename="SS_WARE_F217">
+      <factor value="6249" />
+    </resource>
+
+  <!-- Rastar Oil -->
+    <resource typename="SS_WARE_F238" >
+      <factor value="10415" />
+    </resource>
+
+  <!-- Ore -->
+    <resource typename="SS_WARE_ORE">
+      <factor value="3906" primary="1" />
+    </resource>
+
+  <!-- Silicon -->
+    <resource typename="SS_WARE_SILICON">
+      <factor value="15361" primary="1" />
+    </resource>
+
+    <!-- Crystals -->
+    <resource typename="SS_WARE_TECH205">
+      <factor value="15622" primary="1" />
+    </resource>
+
+  <!-- Quantum Tubes -->
+    <resource typename="SS_WARE_TECH206">
+      <factor value="26036" />
+    </resource>
+
+  <!-- Microchips -->
+    <resource typename="SS_WARE_TECH207">
+      <factor value="93728" />
+    </resource>
+
+  <!-- Computer Components -->
+    <resource typename="SS_WARE_TECH208">
+      <factor value="12498" />
+    </resource>
+
+  </resources>
+</headquarters>

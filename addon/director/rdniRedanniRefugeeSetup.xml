@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="ISO-8859-1" ?>
+<?xml-stylesheet href="director.xsl" type="text/xsl" ?>
+<director name="rdniRedanniRefugeeSetup" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="director.xsd">
+  <documentation>
+    <author name="Nodus Cursorius" alias="Nodus Cursorius"/>
+      <content name="conRedanniRefugeeSetup" description="Post game setup when starting as Redanni Refugee" />
+      <version number="1.0" date="March 26th 2015" status="development"/>
+  </documentation>
+   <cues>
+      <cue name="cueRedanniRefugeeSetup">
+         <condition>
+            <check_all>
+               <check_age value="{player.age}" min="1s" />
+            </check_all>
+         </condition>
+         <action>
+            <do_all>
+               <do_all exact="20">
+                  <create_actor race="terran" subrace="terran" name="{random.pilot.terran}" face="{random.pilot.terran}" voice="{random.pilot.terran}" location="passenger" object="{player.ship}"/>
+               </do_all>
+               <do_all exact="5">
+                  <create_actor race="terran" subrace="terran" name="{random.pilot.terran}" face="{random.pilot.terran}" voice="{random.pilot.terran}" location="passenger" object="{player.ship}">
+                   <skills>
+                    <fighting min="0" max="50" />
+                    <hacking min="0" max="50" />
+                    <engineering min="0" max="50" />
+                    <mechanical min="0" max="50" />
+                   </skills> 
+                  </create_actor>
+               </do_all>
+         
+                <find_gate group="this.gates" multiple="1" max="6">
+                  <sector x="13" y="4"/>
+                </find_gate> 
+                <find_gate group="this.gates" multiple="1" max="6">
+                  <sector x="15" y="11"/>
+                </find_gate> 
+                <find_gate group="this.gates" multiple="1" max="6">
+                  <sector x="17" y="11"/>
+                </find_gate> 
+                <find_gate group="this.gates" multiple="1" max="6">
+                  <sector x="18" y="10"/>
+                </find_gate> 
+                <find_gate group="this.gates" multiple="1" max="6">
+                  <sector x="18" y="11"/>
+                </find_gate> 
+                <find_gate group="this.gates" multiple="1" max="6">
+                  <sector x="18" y="12"/>
+                </find_gate> 
+                <find_gate group="this.gates" multiple="1" max="6">
+                  <sector x="19" y="11"/>
+                </find_gate> 
+                <find_gate group="this.gates" multiple="1" max="6">
+                  <sector x="20" y="0"/>
+                </find_gate> 
+
+                <find_station group="this.gates" multiple="1" max="100">
+                  <sector x="13" y="4"/>
+                </find_station>
+                <find_station group="this.gates" multiple="1" max="100">
+                  <sector x="15" y="11"/>
+                </find_station>
+                <find_station group="this.gates" multiple="1" max="100">
+                  <sector x="17" y="11"/>
+                </find_station>
+                <find_station group="this.gates" multiple="1" max="100">
+                  <sector x="18" y="10"/>
+                </find_station>
+                <find_station group="this.gates" multiple="1" max="100">
+                  <sector x="18" y="11"/>
+                </find_station>
+                <find_station group="this.gates" multiple="1" max="100">
+                  <sector x="18" y="12"/>
+                </find_station>
+                <find_station group="this.gates" multiple="1" max="100">
+                  <sector x="19" y="11"/>
+                </find_station>
+                <find_station group="this.gates" multiple="1" max="100">
+                  <sector x="20" y="0"/>
+                </find_station>
+
+                <set_group_known group="this.gates" known="1"/>
+
+                <create_ship class="m5" name="introXen" typename="SS_SH_X_M5" race="xenon" racelogic="0">
+                  <position object="{player.ship}" />
+                  <sector sector="{player.sector}"/>
+                  <equipment loadout="default"/>
+               </create_ship>
+                <create_ship class="m5" name="introXen2" typename="SS_SH_TERRAFORMER4" race="xenon" racelogic="0">
+                  <position object="{player.ship}" />
+                  <sector sector="{player.sector}"/>
+                  <equipment loadout="default"/>
+               </create_ship>
+                <create_ship class="m4" name="introXen3" typename="SS_SH_X_M4" race="xenon" racelogic="0">
+                  <position object="{player.ship}" />
+                  <sector sector="{player.sector}"/>
+                  <equipment loadout="default"/>
+               </create_ship>
+
+               <set_hull exact="49" object="{player.ship}"/>
+               <set_shield exact="32" object="{player.ship}"/>
+               <set_hull exact="19" object="introXen"/>
+               <set_shield exact="12" object="introXen"/>
+               <set_hull exact="15" object="introXen2"/>
+               <set_shield exact="39" object="introXen2"/>
+               <set_hull exact="51" object="introXen3"/>
+               <set_shield exact="8" object="introXen3"/>
+               <set_command object="introXen" command="attack" commandobject="{player.ship}"/> 
+               <set_command object="introXen2" command="attack" commandobject="{player.ship}"/> 
+				<set_command object="introXen3" command="attack" commandobject="{player.ship}"/> 
+            </do_all>
+         </action>
+      </cue>
+   </cues>
+</director>
