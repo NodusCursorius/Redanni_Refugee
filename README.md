@@ -1,5 +1,5 @@
 # Redanni_Refugee
-A modification of of [Litcube's Universe](http://litcube.xtimelines.net/wiki/index.php/Main_Page), which is an overhaul of [Egosoft's X3: Albion Prelude](http://www.egosoft.com/games/x3ap/info_en.php)
+A game-start modification of of [Litcube's Universe](http://litcube.xtimelines.net/wiki/index.php/Main_Page), which is an overhaul of [Egosoft's X3: Albion Prelude](http://www.egosoft.com/games/x3ap/info_en.php)
 
 Start off with a heavily damaged Atmospheric Lifter, containing basic supplies, combat drones, and survivors. Your ship will already be under attack by three Xenon/OCV fighters. Survive the initial assault and the starting sector's wealth is yours.
 
