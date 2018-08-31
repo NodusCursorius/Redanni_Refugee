@@ -15,4 +15,4 @@ Sector background and music are both from Homeworld. Excluding *_srccat\L\true\s
 
 Copy the **addon** and **soundtrack** folders into your base X3 directory. The **_srccat** directory contains the scripts and files used within the included *addon\10.cat*
 
-Modified files are based off of: Litecube's Universe version **1.7** / X3 AP non-steam executable **3.0**
+Modified files are based off of: Litecube's Universe version **1.72** / X3 AP non-steam executable **3.3**
